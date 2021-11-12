@@ -11,14 +11,20 @@ function calcu() {
         alert("Please enter service");
         return;
     }
+   
+    let tip=((a/100)*s)/p;
+    tip =tip.toFixed(2);
+    let total=(a/p);
+    total= parseFloat(total)+parseFloat(tip);
+    document.getElementById("tip").style.display = "block";
+    document.getElementById("ttl").style.display = "block";
+    
     if(p==='1'){
-        document.getElementById("each").style.display= "none";
+        document.getElementById("result").innerHTML = tip;
+        document.getElementById("total").innerHTML = total;
     }
     else{
-        document.getElementById("each").style.display= "block";
+        document.getElementById("result").innerHTML = tip+" Each";
+        document.getElementById("total").innerHTML = total+" Each";
     }
-    let total=((a/100)*s)/p;
-    total =total.toFixed(2);
-    document.getElementById("tip").style.display = "block";
-    document.getElementById("result").innerHTML = total;
 }
