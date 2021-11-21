@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <script type="text/javascript" src="app.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Tip Calculator</h1>
+            <div class="calculator">
+                <p>Bill Amount</p>
+                <input id="amount" type="text" placeholder="Amound">
+                <p id="invalidAmount"></p>
+                <p>Service Rating</p>
+                <select id="service">
+                    <option selected disabled hidden>Select</option>
+                    <option value="25">25% - Excellent</option>
+                    <option value="20">20% - Very good</option>
+                    <option value="15">15% - Good</option>
+                    <option value="10">10% - Bad</option>
+                    <option value="5">5% - Worst</option>
+                </select>
+                <p id="invalidService"></p>
+                <p>Number of people</p>
+                <input id="people" type="text">
+                <p id="invalidPeople"></p>
+                <button onclick="calcu()">Calculate</button>
+            </div>
+            <hr class="line" size="1" width="90%" color="black">
+            <div class="footer">
+            <div id="tip" class="tip">
+                <p>Tip Amount</p>
+                <b>$<span id="result"> 0</span></b> 
+            </div>
+            <div  id="ttl" class="tip">
+                <p>Split Amount</p>
+               <b> $<span id="total"> 0</span></b>
+            </div>
+        </div>
+
+        </div>
+        </div>
+    </body>
+</html>

@@ -8,6 +8,7 @@ function calcu() {
 
     if(a<1){
         document.getElementById("invalidAmount").innerHTML ="Please enter valid amount"
+        return;
     }
     if(s==='Select'){
         document.getElementById("invalidService").innerHTML ="please enter Service Rating"
@@ -15,6 +16,7 @@ function calcu() {
     }
     if(p<1){
         document.getElementById("invalidPeople").innerHTML ="people must have at list one"
+        return;
     }
    
     let tip=((a/100)*s)/p;
