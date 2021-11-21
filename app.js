@@ -6,7 +6,7 @@ function calcu() {
     var s=document.getElementById("service").value;
     var p=document.getElementById("people").value;
 
-    if(a<1){
+    if(a<1 || isNaN(a)){
         document.getElementById("invalidAmount").innerHTML ="Please enter valid amount"
         return;
     }
@@ -14,15 +14,16 @@ function calcu() {
         document.getElementById("invalidService").innerHTML ="please enter Service Rating"
         return;
     }
-    if(p<1){
-        document.getElementById("invalidPeople").innerHTML ="people must have at list one"
+    if(p<1 || isNaN(p)){
+        document.getElementById("invalidPeople").innerHTML ="Please enter valid input, People can not less then 1"
         return;
     }
    
     let tip=((a/100)*s)/p;
-    tip =tip.toFixed(2);
+    tip =tip.toFixed(1);
     let total=(a/p);
     total= parseFloat(total)+parseFloat(tip);
+    total=total.toFixed(1);
     document.getElementById("tip").style.display = "block";
     document.getElementById("ttl").style.display = "block";
     
