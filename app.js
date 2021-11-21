@@ -1,15 +1,20 @@
 function calcu() {
+    document.getElementById("invalidAmount").innerHTML =""
+    document.getElementById("invalidService").innerHTML =""
+    document.getElementById("invalidPeople").innerHTML =""
     var a=document.getElementById("amount").value;
     var s=document.getElementById("service").value;
     var p=document.getElementById("people").value;
 
-    if(a===''){
-        alert("Please enter valid amount");
-        return;
+    if(a<1){
+        document.getElementById("invalidAmount").innerHTML ="Please enter valid amount"
     }
     if(s==='Select'){
-        alert("Please enter service");
+        document.getElementById("invalidService").innerHTML ="please enter Service Rating"
         return;
+    }
+    if(p<1){
+        document.getElementById("invalidPeople").innerHTML ="people must have at list one"
     }
    
     let tip=((a/100)*s)/p;

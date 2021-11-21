@@ -1,10 +1,11 @@
 body{
-    background-image: url("img/calculator.jpg");
+   /* background-image: url("img/calculator.jpg"); */
+   background-color: lightslategray;
     font-family: 'Raleway', sans-serif;
 }
 .container{
-    width: 300px;
-    height: 420px;
+    width: 350px;
+    height: 450px;
     background-color: white;
     position: absolute;
     left: 50%;
@@ -12,7 +13,7 @@ body{
     transform: translatex(-50%) translateY(-50%);
     border-radius: 20px;
 }
-h1{
+/* h1{
     position: absolute;
     left: 50%;
     top: -60px;
@@ -26,52 +27,71 @@ h1{
     text-align: center;
     padding-bottom: 25px;
     font-weight: 800;
+} */
+h1{
+    text-align: center;
+    margin-bottom: -1rem;
 }
 .calculator{
     padding: 20px;
 }
+p{
+    font-size:x-small;
+}
 
 input,select{
     width: 80%;
-    border: none;
-    border-bottom: 1px solid lightblue;
+    border-radius: 10px;
+    border: 1px solid lightblue;
+    /* border-bottom: 1px solid lightblue; */
     padding:10px;
 }
-input:focus,select:focus{
-    border: 1px solid lightblue;
-    outline: none;
+input:focus,select:focus,option:focus{
+    border-radius: 10px; ;
+    /* outline: none; */
 }
 select{
     width: 88% !important;
 }
 button{
     margin: 20px;
-    width: 140px;
+    width: 120px;
     height:30px;
-    background-color: aquamarine;
+    background-color: lightslategrey;
     color: white;
     font-size: 16px;
     border: none;
-    transform: translateX(30%);
+    border-radius: 10px;
+    transform: translateX(120%);
 
+}
+.line{
+    margin-top: -2.2rem;
 }
 button:hover{
     background-color: blue;
 }
 .footer{
     display: flex;
+    justify-content: space-between;
     width: 300px;
     height: 50px;
+    margin: 2rem;
+}
+#invalidAmount, #invalidPeople, #invalidService{
+    margin-top: -1px;
+    margin-left: 13px;
+    color: red;
+    font-size: 12px;
 }
 .tip{
     display: none;
     text-align: left;
     font-size: 15px;
-    margin-top: -45px;
+    margin-top: -15px;
     padding: 10px;
     padding-top: 0px; 
     width: 250px;
     flex-direction: row;
+    justify-content: space-between;
 }
-
-
